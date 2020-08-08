@@ -1,24 +1,27 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Header from "./components/Header";
-import styled from "styled-components";
-import GlobalStyle from "./theme/globalstyle";
 import Loading from "./components/Loading/Loading";
-import "./App.css";
-
-const AppWrapper = styled.div`
-  height: 100vh;
-  margin: 0;
-`;
+import "./App.scss";
 
 function App() {
   return (
-    <Fragment>
-      <GlobalStyle />
-      <AppWrapper>
+    <div className="app-main">
         <Header />
-        <Loading />
-      </AppWrapper>
-    </Fragment>
+        <section className="first-section">
+          <Loading />
+          <Loading />
+        </section>
+        <section className="second-section">
+         <Loading />
+         <Loading />
+        </section>
+        <section className="third-section">
+          <Loading />
+          <Loading />
+        </section>
+ 
+
+    </div>
   );
 }
 
