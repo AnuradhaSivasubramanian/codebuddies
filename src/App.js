@@ -1,25 +1,46 @@
 import React from "react";
 import Header from "./components/Header";
 import Loading from "./components/Loading/Loading";
-import "./App.scss";
+import "./Asset/style/App.scss";
+import WhoWeAre from "./components/whoWeAre/WhoWeAre";
+import WhoWeAreTitle from "./components/whoWeAre/WhoWeAreTitle";
+import GitHub from "./components/gitHub/GitHub";
+import Contact from "./components/contact/Contact";
 
 function App() {
   return (
-    <div className="app-main">
+    <div >
+              <section className="header">
+
         <Header />
-        <section className="first-section">
+        </section>
+        <main className="app-main">
+        <section className="articles">
           <Loading />
+          </section>
+
+          <section className="podcast">
           <Loading />
         </section>
-        <section className="second-section">
-         <Loading />
-         <Loading />
+
+        <section className="whoWeAreTitle">
+         <WhoWeAreTitle />
+         </section>
+
+         <section className="whoWeAre">
+
+         <WhoWeAre />
         </section>
-        <section className="third-section">
-          <Loading />
-          <Loading />
+        <section className="gitHub">
+          <GitHub/>
+          </section>
+
+          <section className="contact">
+
+          <Contact/>
         </section>
- 
+        </main>
+
 
     </div>
   );

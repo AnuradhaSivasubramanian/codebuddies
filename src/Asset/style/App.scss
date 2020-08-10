@@ -1,0 +1,90 @@
+@import "./global.scss";
+
+
+.app-main{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 50vh);
+    grid-template-areas: 
+    "articles"
+    "podcast"
+    "whoWeAreTitle"
+    " whoWeAre"
+    "gitHub"
+    "contact";
+}
+.header{
+    grid-area: header;
+
+}
+.articles{
+    grid-area: articles;
+    background:pink;
+
+}
+.podcast{
+    grid-area: podcast;
+    background:blue;
+
+}
+.whoWeAre{
+    grid-area: whoWeAre;
+    background:purple;
+
+}
+.gitHub{
+    grid-area: gitHub;
+background:cyan;
+}
+
+.contact{
+    grid-area: contact;
+    background:yellow;
+
+}
+.whoWeAreTitle{
+    grid-area: whoWeAreTitle;
+    background:yellow;
+    
+
+}
+
+@media only screen and (min-width:630px) {
+
+    .app-main{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 80vh);
+        grid-template-areas: 
+        "articles podcast"
+        "whoWeAreTitle whoWeAre"
+        "gitHub contact";
+    }
+}
+
+@media only screen and (width:568px) and (height:320px){
+
+    .app-main{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 80vh);
+        grid-template-areas: 
+        "articles podcast"
+        "whoWeAreTitle whoWeAre"
+        "gitHub contact";
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:1024px)and (min-height:1024px) and (max-height:1366px){
+
+    .app-main{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3,40vh);
+        grid-template-areas: 
+        "articles podcast"
+        "whoWeAreTitle whoWeAre"
+        "gitHub contact";
+    }
+
+}
